@@ -7,7 +7,6 @@ import { Layout } from './App.styled';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
   useEffect(() => {
