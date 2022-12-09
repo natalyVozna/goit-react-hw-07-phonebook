@@ -33,11 +33,12 @@ export const FormContact = ({ onSubmitHandle }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Field>
-        <LabelInput htmlFor={nameInputId}>Name</LabelInput>
+        {/* <LabelInput htmlFor={nameInputId}>Name</LabelInput> */}
         <InputStyled
           type="text"
           name="name"
           id={nameInputId}
+          placeholder="name"
           value={name}
           onChange={handleChangeName}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -46,12 +47,13 @@ export const FormContact = ({ onSubmitHandle }) => {
         />
       </Field>
       <Field>
-        <LabelInput htmlFor={telInputId}>Number</LabelInput>
+        {/* <LabelInput htmlFor={telInputId}>Number</LabelInput> */}
         <InputStyled
           type="tel"
           name="number"
           id={telInputId}
           value={number}
+          placeholder="number"
           onChange={handleChangeNumber}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
