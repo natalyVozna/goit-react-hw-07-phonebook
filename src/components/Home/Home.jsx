@@ -10,7 +10,6 @@ import {
   ContactsBox,
 } from './Home.styled';
 import { Notify } from 'notiflix';
-import { Section } from '../Section/Section';
 import { FormContact } from '../FormContact/FormContact';
 import { Contacts } from '../Contacts/Contacts';
 import { Filter } from '../Filter/Filter';
@@ -20,7 +19,6 @@ import { getContcts, getFilter } from '../../redux/selectors';
 import { addContact, deleteContact } from '../../redux/operations';
 import { setFilter } from '../../redux/filterSlice';
 import { useState } from 'react';
-import { ReactComponent as Plus } from '../../images/plus.svg';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -40,7 +38,6 @@ export const Home = () => {
     if (!isName) {
       const contact = { ...data, color: getRandomHexColor() };
       dispatch(addContact(contact));
-      //   setShowForm(false);
     } else {
       Notify.warning('You already have this contact');
     }

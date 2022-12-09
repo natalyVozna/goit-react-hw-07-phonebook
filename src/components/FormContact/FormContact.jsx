@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-import { InputStyled, LabelInput, Field, Form } from './FormContact.styled';
+import { InputStyled, Field, Form } from './FormContact.styled';
 import { Button } from '../Button/Button';
 
 export const FormContact = ({ onSubmitHandle }) => {
@@ -33,7 +33,6 @@ export const FormContact = ({ onSubmitHandle }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Field>
-        {/* <LabelInput htmlFor={nameInputId}>Name</LabelInput> */}
         <InputStyled
           type="text"
           name="name"
@@ -47,7 +46,6 @@ export const FormContact = ({ onSubmitHandle }) => {
         />
       </Field>
       <Field>
-        {/* <LabelInput htmlFor={telInputId}>Number</LabelInput> */}
         <InputStyled
           type="tel"
           name="number"
